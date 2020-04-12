@@ -1,27 +1,16 @@
-import React, { useState } from "react";
-//import "./App.css";
-import Navbar from "./components/Navbar";
-import Table from "./components/Table";
-
-import { EmployeeContext } from "./components/EmployeeContext";
+import React from "react";
+import Header from "./components/Header";
+import Wrapper from "./components/Wrapper";
+import Main from "./components/Main";
+import "./App.css";
 
 function App() {
-  const [employees, setEmployees] = useState([]);
-  const [displayedEmployees, setDisplayedEmployees] = useState([]);
-
   return (
     <div className="App">
-      <EmployeeContext.Provider
-        value={{
-          employees,
-          setEmployees,
-          displayedEmployees,
-          setDisplayedEmployees,
-        }}
-      >
-        <Navbar />
-        <Table />
-      </EmployeeContext.Provider>
+      <Wrapper>
+        <Header />
+        <Main />
+      </Wrapper>
     </div>
   );
 }
