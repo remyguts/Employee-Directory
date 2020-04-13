@@ -1,7 +1,7 @@
 import React from "react";
 import API from "../utils/API";
 import Employees from "./EmployeeList";
-
+//get rid of unneeded imports
 class Main extends React.Component {
   state = {
     employees: [],
@@ -42,7 +42,7 @@ class Main extends React.Component {
       this.setState({ sortType: "none" });
     }
   };
-
+//simplify and make less files
   render() {
     return (
       <div>
